@@ -28,3 +28,9 @@ box = os.path.sep.join(["dataset", "airplanes.csv"])
 #Extraction de la localisation prédéfini des bounding box de la base de donnée airplanes
 box_real = open(box).read().strip().split("\n")
 print(box_real)
+
+#Test pour comprendre le format des données de open cv
+s = "image_0001.jpg"
+image = os.path.sep.join([images_chemin,s])
+images = cv2.imread(image)
+print(load_img(image, target_size=(224,224)))
